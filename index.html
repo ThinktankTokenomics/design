@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroStream - PixxelHack Webathon Entry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.birds.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="app-container">
+        <div id="loading-screen">
+            <h1>NEUROSTREAM</h1>
+            <p>Initializing Neuro-Cognitive Synthesis Platform... Stand by for system activation. Interfacing with core neural networks.</p>
+            <button id="activate-system-button">ACTIVATE SYSTEM</button>
+        </div>
+
+        <div id="main-content">
+            <div id="lightning-flash"></div>
+            <div id="storm-overlay"></div>
+            <div id="vanta-birds"></div> <div class="background-data-stream">
+                <div class="bg-layer"></div>
+                <div class="bg-layer"></div>
+            </div>
+            <div id="core-hyper-nexus" class="data-core" data-page="hyper-nexus">
+                <span class="core-label">HYPER-NEXUS</span>
+                <span class="core-status">ONLINE</span>
+            </div>
+            <div id="core-emotions" class="data-core" data-page="emotions">
+                <span class="core-label">EMOTIONS</span>
+                <span class="core-status">IDLE</span>
+            </div>
+            <div id="core-image-hover" class="data-core" data-page="image-hover">
+                <span class="core-label">VISUALIZER</span>
+                <span class="core-status">STANDBY</span>
+            </div>
+            <div id="core-scroll-text" class="data-core" data-page="scroll-text">
+                <span class="core-label">DATASCALE</span>
+                <span class="core-status">OFFLINE</span>
+            </div>
+            <div id="core-mystery" class="data-core" data-page="mystery-element">
+                <span class="core-label">ELEMENT X</span>
+                <span class="core-status">UNKNOWN</span>
+            </div>
+        </div>
+
+        <div id="hyper-nexus-page" class="page-content">
+            <h2>HYPER-NEXUS CORE DIAGNOSTICS</h2>
+            <p>Welcome to the Hyper-Nexus control interface. This central processing unit manages the entire NeuroStream system, overseeing all cognitive and data flow operations. You can interact with the embedded AI assistant below for real-time diagnostics and system queries.</p>
+            <div class="ai-chat-container">
+                <h3>NEUROSTREAM AI ASSISTANT</h3>
+                <div class="ai-response-area" id="ai-response">
+                    "Greetings. How may I assist you with the NeuroStream system today? Please enter your query below."
+                </div>
+                <div class="processing-indicator" id="processing-indicator">
+                    <div class="cube">
+                        <div class="cube-face"></div><div class="cube-face"></div><div class="cube-face"></div>
+                        <div class="cube-face"></div><div class="cube-face"></div><div class="cube-face"></div>
+                    </div>
+                </div>
+                <form class="ai-chat-form" id="ai-chat-form">
+                    <input type="text" id="chat-input" class="chat-input" placeholder="Enter your query...">
+                    <button type="submit" class="chat-submit-button">SEND</button>
+                </form>
+                <div class="system-logs" id="system-logs">
+                    <div class="system-logs-title">SYSTEM LOGS</div>
+                </div>
+            </div>
+            <button class="return-button" data-return-to="main-content">RETURN TO NETWORK</button>
+        </div>
+
+        <div id="image-hover-page" class="page-content">
+            <div id="vanta-birds-page2"></div> <h2>VISUALIZER CORE INTERFACE</h2>
+            <p>Engage with the Visualizer Core's data manipulation protocols. The following image demonstrates a dynamic state-change on cursor proximity, a key function for processing and interpreting visual data streams.</p>
+            <div class="image-hover-container">
+                <h3>INTERACTIVE VISUALIZER MODULE</h3>
+                <div class="image-wrapper">
+                    <img class="image-default" src="https://placehold.co/400x400/1e293b/fff?text=DEFAULT+STATE" alt="Default Image">
+                    <img class="image-hover" src="https://placehold.co/400x400/94a3b8/000?text=HOVER+STATE" alt="Hover Image">
+                </div>
+            </div>
+            <button class="return-button" data-return-to="main-content">RETURN TO NETWORK</button>
+        </div>
+
+        <div id="scroll-text-page" class="page-content">
+            <h2>DYNAMIC DATASCALE PROTOCOL</h2>
+            <p>This module demonstrates a key feature of the NeuroStream's cognitive feedback loop, where text elements dynamically scale in response to user input. Scroll down to see the effect in action, and scroll back up to reverse the process.</p>
+            <div class="scroll-text-section">
+                <div class="scroll-text-wrapper">
+                    <p id="scaling-text">
+                        The NeuroStream, in a state of perpetual flux, processes and synthesizes petabytes of raw data. This continuous flow of information, from disparate sources across the network, is not merely stored but actively reformed. Every scroll, every interaction, represents a synaptic firing, a new pathway being forged in this vast digital consciousness. The scale of thought is not static, it is a living, breathing component of the system, expanding with new ideas and contracting with focus.
+                    </p>
+                </div>
+            </div>
+            <button class="return-button" data-return-to="main-content">RETURN TO NETWORK</button>
+        </div>
+
+        <div id="mystery-element-page" class="page-content">
+            <h2>ELEMENT X: THE COSMIC NEXUS</h2>
+            <p>Beyond the known cores lies 'Element X,' a theoretical component of the NeuroStream. Its purpose and function are still under active investigation, but preliminary data suggests a nexus with higher-dimensional data constructs. Prepare for a glimpse into the unknown.</p>
+            <div style="position: relative; width: 100%; height: 80vh; overflow: hidden;">
+                <canvas id="mystery-element-canvas" style="position: absolute; top: 0; left: 0;"></canvas>
+            </div>
+            <button class="return-button" data-return-to="main-content">RETURN TO NETWORK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
